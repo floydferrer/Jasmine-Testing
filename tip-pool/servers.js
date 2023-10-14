@@ -42,3 +42,5 @@ function updateServerTable() {
     serverTbody.append(newTr);
   }
 }
+
+const tBody = document.getElementsByTagName('tbody');
