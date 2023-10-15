@@ -76,3 +76,4 @@ function updateSummary() {
   summaryTds[2].innerHTML =  Math.round(tipPercentAvg) + '%';
 }
 
+let payment = document.querySelectorAll('#paymentTable tbody tr td');
