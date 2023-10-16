@@ -33,8 +33,18 @@ describe("Helpers test (with setup and tear-down)", function() {
         expect(paymentTds[2].innerHTML).toEqual('10%');
     });
     
+    it('should create a delete button and append to a newly created Tr', function () { 
+        let newTr = document.createElement('tr');
+
+        appendDeleteBtn(newTr);
+
+        expect(newTr.children.length).toEqual(1);
+        expect(newTr.firstChild.innerHTML).toEqual('X');
+    });
+    
     
     afterEach(function() {
       paymentTbody.innerHTML = ''
+      allPayments = {};
     });
   });

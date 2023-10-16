@@ -55,6 +55,7 @@ function appendPaymentTable(curPayment) {
   appendTd(newTr, '$' + curPayment.billAmt);
   appendTd(newTr, '$' + curPayment.tipAmt);
   appendTd(newTr, curPayment.tipPercent + '%');
+  appendDeleteBtn(newTr, 'X');
 
   paymentTbody.append(newTr);
 }
@@ -77,3 +78,6 @@ function updateSummary() {
 }
 
 let payment = document.querySelectorAll('#paymentTable tbody tr td');
+// summaryTds[0].innerHTML = '$100';
+// summaryTds[1].innerHTML = '$10';
+// summaryTds[2].innerHTML = '10%';
